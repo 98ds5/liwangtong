@@ -2,80 +2,42 @@
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 *.egg-info/
-dist/
-build/
-*.spec
 
-# PyInstaller
+# PyInstaller build output
+build/
+dist/
 *.exe
 *.manifest
+*.spec
 campus_login.exe_extracted/
 
-# User data (migrated to %LOCALAPPDATA%)
-config.json
-runtime.json
+# User data (local config, runtime state)
+src/config.json
+src/runtime.json
 popup.hwnd
 popup.show
-cacert.pem
 *.tmp
 
-# Log
-campus_login.log
+# CA certificate (downloaded at build time)
+cacert.pem
 
-# Runtime artifacts
+# Log files
 *.log
+
+# Runtime artifact directories
 output/
 stage/
 test_run/
 recovered/
 RECOVERY/
 
-# Backup / recovery files
-BACKUP_*.py
-campus_login.bak_*.py
-*_test.py
-recover*.py
-patch_*.py
-rebuild_*.py
-rebuilt_*.py
-rewrite_*.py
-rec_*.py
-un6_out.py
-e2e_link.py
-insert_hover.py
-cmd_init_rec.py
-main_rec.py
-ref_*.py
-m___init__.py
-m__*.py
-m_close.py
-m_get_status_info.py
-m_in_grace_period.py
-m_login_with_retry.py
-m_login.py
-m_logout.py
-campus_login_rebuilt.py
-campus_login_rec.py
-campus_login_doubao.py
-campus_login.bak_before_doubao.py
-ast_check.py
-decomp_err.txt
-pyinstxtractor_ng.py
+# Archive — historical backups, recovery scripts, build logs, releases
+archive/
 
-# Build output
-梨网通.spec
-campus_login.spec
-campus_installer.iss
-
-# Misc
-*.txt
-!HANDOFF.md
-!DEVELOPMENT_LOG.md
-!liwangtong_handoff.md
-old_popup.png
-campus_notify.ico
-campus_notify_err.ico
-app.ico
-_wtest.txt
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+*.swp
+Thumbs.db
