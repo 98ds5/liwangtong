@@ -88,4 +88,4 @@ ISCC.exe installers/campus_installer.iss
 
 ## 许可
 
-本项目仅供学习交流使用。
+MIT License — 详见 [LICENSE](./LICENSE) 文件。
