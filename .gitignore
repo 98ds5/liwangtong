@@ -1,59 +1,35 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.egg-info/
 
-# PyInstaller build output
+# 打包产物
 build/
 dist/
+output/
+stage/
 *.exe
 *.manifest
 *.spec
-# 但仓库自带的打包配置要入库，否则别人打不出一样的包
+# 仓库自带的打包配置要入库，否则别人打不出一样的包
 !campus_login.spec
 !campus_login.manifest
-campus_login.exe_extracted/
 
-# User data (local config, runtime state)
+# 用户数据和运行期文件
 src/config.json
 src/runtime.json
 popup.hwnd
 popup.show
+cacert.pem
+*.log
 *.tmp
 
-# CA certificate (downloaded at build time)
-cacert.pem
-
-# Log files
-*.log
-
-# Runtime artifact directories
-output/
-stage/
-test_run/
-recovered/
-RECOVERY/
-
-# Archive — historical backups, recovery scripts, build logs, releases
+# 本地存档：旧版备份、构建日志、历史安装包
 archive/
 
-# IDE / OS
+# IDE / 系统
 .vs/
 .vscode/
 .idea/
 *.swp
 Thumbs.db
-
-# 本地工具与临时残留，不要提交
-.openclaw/
-null/
-PowerShell*/
-jadx/
-*.dmp
-
-# 反编译 / 抓包拿到的第三方源码和资料，只留在本地
-docs/android_src/
-docs/reference/
-*.dex
-*.apk
