@@ -1,9 +1,10 @@
 ; Liwangtong installer script (Inno Setup 6)
-; Build with: ISCC.exe campus_installer.iss
+; Build from project root: ISCC.exe installers\campus_installer.iss
+; Paths below are relative to this script file
 
 #define MyAppName "梨网通"
 #define MyAppExe "梨网通.exe"
-#define MyAppVersion "4.0.10"
+#define MyAppVersion "4.0.11"
 #define MyAppPublisher "PearTech"
 #define MyAppDir "{localappdata}\PearTech\Liwangtong"
 
@@ -14,14 +15,13 @@ AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 DefaultDirName={#MyAppDir}
 DisableProgramGroupPage=yes
-; 允许用户选择安装目录（总是显示目录选择页，用户可改；记住上次位置）
 DisableDirPage=no
-OutputDir=output
+OutputDir=..\output
 OutputBaseFilename=LiWangTong-Setup-{#MyAppVersion}
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
-SetupIconFile=app.ico
+SetupIconFile=..\assets\app.ico
 UninstallDisplayIcon={app}\{#MyAppExe}
 UninstallDisplayName={#MyAppName}
 PrivilegesRequired=lowest
@@ -36,9 +36,9 @@ Name: "desktopicon"; Description: "Create desktop shortcut"; GroupDescription: "
 
 [Files]
 ; onedir：安装整个程序目录（梨网通.exe + _internal 依赖 + 图标）
-Source: "stage\梨网通\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "stage\campus_notify.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "stage\campus_notify_err.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\stage\梨网通\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\stage\campus_notify.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\stage\campus_notify_err.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExe}"; Parameters: ""; IconFilename: "{app}\{#MyAppExe}"

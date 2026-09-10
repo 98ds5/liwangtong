@@ -1,0 +1,8 @@
+# 运行时依赖（tkinter / ctypes / winreg 是标准库，不用装）
+requests>=2.24
+certifi
+pillow>=9.0
+pystray>=0.19.5
+
+# 打包才需要，跑源码不用装：
+#   pyinstaller>=6.0

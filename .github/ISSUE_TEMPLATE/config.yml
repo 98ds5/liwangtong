@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先看排错文档
+    url: https://github.com/98ds5/liwangtong/blob/master/docs/TROUBLESHOOTING.md
+    about: 连不上、界面打不开、托盘异常、卸载残留，大部分情况这里能自己解决

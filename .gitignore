@@ -10,6 +10,9 @@ dist/
 *.exe
 *.manifest
 *.spec
+# 但仓库自带的打包配置要入库，否则别人打不出一样的包
+!campus_login.spec
+!campus_login.manifest
 campus_login.exe_extracted/
 
 # User data (local config, runtime state)
@@ -41,3 +44,16 @@ archive/
 .idea/
 *.swp
 Thumbs.db
+
+# 本地工具与临时残留，不要提交
+.openclaw/
+null/
+PowerShell*/
+jadx/
+*.dmp
+
+# 反编译 / 抓包拿到的第三方源码和资料，只留在本地
+docs/android_src/
+docs/reference/
+*.dex
+*.apk
