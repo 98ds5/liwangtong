@@ -1,5 +1,10 @@
 # 梨网通 / LiWangTong
 
+[![CI](https://github.com/98ds5/liwangtong/actions/workflows/ci.yml/badge.svg)](https://github.com/98ds5/liwangtong/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+[![Release](https://img.shields.io/github/v/release/98ds5/liwangtong)](https://github.com/98ds5/liwangtong/releases)
+
 Windows 上的 Dr.COM 校园网自动登录客户端。开机自己认证、断线自己重连，平时缩在系统托盘里，不用再开浏览器输一遍账号密码。
 
 我自己的学校（安徽理工大学，AUST）用的就是这套 Dr.COM 认证，联通 / 电信 / 移动三条线都实测过。写它的动机很简单：每天开浏览器点一遍登录太烦。认证网关地址是写死的，换学校要改代码，先看下面的「适用范围」。
