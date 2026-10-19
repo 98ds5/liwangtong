@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 这个仓库没有单测（登录逻辑要真校园网才跑得起来），
+    # CI 只做「能不能装、能不能编译、配置模板是不是合法 JSON」这层保底。
+    - name: Syntax check
+      run: python -m compileall -q src
+
+    - name: Validate config template
+      run: |
+        python -c "import json,pathlib; json.loads(pathlib.Path('src/config.template.json').read_text(encoding='utf-8')); print('config.template.json OK')"

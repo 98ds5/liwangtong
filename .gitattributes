@@ -1,0 +1,12 @@
+# 统一换行符：仓库里存 LF，检出到 Windows 用 CRLF（.vbs 必须 CRLF 才能被 cscript 直接跑）
+* text=auto
+
+*.vbs   text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+*.iss   text eol=crlf
+
+*.png   binary
+*.ico   binary
+*.exe   binary
